@@ -50,25 +50,6 @@ def aggregate_voucher(voucher):
         voucher_averages[name] = 1
 
 
-def validate_summaries(calc_averages, input_summaries):
-    if input_summaries and calc_averages:
-        if len(input_summaries) == len(calc_averages) and len(input_summaries) > 0:
-            for summary in input_summaries:
-                if summary in calc_averages:
-                    if calc_averages.get(summary) == \
-                            int(input_summaries[summary]['quantity']):
-                        pass
-                    else:
-                        return False
-                else:
-                    return False
-        else:
-            return False
-    else:
-        return False
-    return True
-
-
 def get_items_to_print(columns, items):
     if len(items) == 0:
         response = []
@@ -116,7 +97,6 @@ def main():
         line = input_file.readline().rstrip('\r\n')
     if input_file:
         input_file.close()
-    print('Voucher input is valid: {}'.format(validate_summaries(voucher_averages, voucher_summaries)))
     print_vouchers(vouchers)
 
 
