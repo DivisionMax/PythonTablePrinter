@@ -5,6 +5,16 @@
 An input file describing the desired format and a list of available vouchers will converted into a table. 
 This table is ideally printed by a dot-matrix printer.
 
+## Example
+
+**Input**
+
+![alt text](images/input.png "An example input file")
+
+**Output**
+
+![alt text](images/table-output.png "An example output file as a table")
+
 ## How To
 
 _Table Printer_ is a command-line tool. It is assumed the input file ends with the `.txt` extension
